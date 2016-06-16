@@ -1,0 +1,4 @@
+<div class="container">
+    <h4 *ngIf="title">{{title}}</h4>
+    <sticky-task *ngFor="let task of tasks" [task]="task" [status]="status"></sticky-task>
+</div>

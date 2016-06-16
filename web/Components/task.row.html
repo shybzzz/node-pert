@@ -1,0 +1,52 @@
+<div class="task">
+    <div class="title"
+         [class.new]="isTaskNew()"
+         [class.doing]="isTaskStarted()"
+         [class.pending]="isTaskPending()"
+         [class.completed]="isTaskCompleted()">{{title}}
+    </div>
+    <div class="properties">
+        <div class="actions">
+            <button class="btn update" (click)="startWork()" *ngIf="canStartWork()"><span
+                    class="glyphicon glyphicon-play"></span>
+            </button>
+            <button class="btn update" (click)="pauseWork()" *ngIf="canPendWork()"><span
+                    class="glyphicon glyphicon-pause"></span>
+            </button>
+            <button class="btn update" (click)="completeTask()" *ngIf="canCompleteTask()"><span
+                    class="glyphicon glyphicon-check"></span>
+            </button>
+            <button class="btn update" (click)="restartTask()" *ngIf="isTaskCompleted()"><span
+                    class="glyphicon glyphicon-alert"></span>
+            </button>
+            <button class="btn update" (click)="saveTask()"><span
+                    class="glyphicon glyphicon-floppy-disk"></span>
+            </button>
+            <button class="btn remove" (click)="deleteTask()"><span
+                    class="glyphicon glyphicon-remove"></span>
+            </button>
+        </div>
+        <div class="name">
+            <label>
+                Name:<br>
+                <textarea [(ngModel)]="task.name"></textarea>
+            </label>
+        </div>
+        <div class="estimation">
+            <label>
+                Estimation:<br>
+                <input type="number" [(ngModel)]="task.estimation">
+            </label>
+        </div>
+        <label>
+            Duration:<br>
+            <input type="text" [value]="getDuration() | taskDuration" disabled>
+        </label>
+        <label>Predecessors:</label>
+        <predecessors-list
+                [task]="task"
+        ></predecessors-list>
+
+
+    </div>
+</div>

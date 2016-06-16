@@ -1,0 +1,59 @@
+<h2><span class="glyphicon glyphicon-tower"></span> {{project?.name}} Tasks </h2>
+<div class="project-description">
+    {{project?.description}}
+</div>
+
+<div>
+    Total Efforts: {{getTotalEfforts() | taskDuration}}
+</div>
+
+<div class="btn-group">
+    <button class="btn add" (click)="addNew()"><span class="glyphicon glyphicon-plus"></span>
+        Add Task to <span class="project-name">{{project?.name}}</span>
+    </button>
+    <button class="btn back" (click)="navigateToProjects()"><span class="glyphicon glyphicon-backward"></span>
+        Back To Projects
+    </button>
+
+</div>
+
+<div class="started-tasks container">
+    <h4>Currently Doing</h4>
+
+    <div class="col-sm-3" *ngFor="let task of getStartedTasks() let i=index">
+        <pert-task-row [task]="task" [title]="i+1" [project]="project"
+                       (onTaskRemoved)="removeTask($event)">
+        </pert-task-row>
+    </div>
+</div>
+
+<div class="canban container">
+    <div class="col-sm-4">
+        <h4>New</h4>
+        <pert-task-row *ngFor="let task of getNewTasks() let i=index"
+                       [task]="task"
+                       [title]="i+1"
+                       (onTaskRemoved)="removeTask($event)"
+        ></pert-task-row>
+    </div>
+
+    <div class="col-sm-4">
+        <h4>Started</h4>
+        <pert-task-row *ngFor="let task of getPendingTasks() let i=index"
+                       [task]="task"
+                       [title]="i+1"
+                       (onTaskRemoved)="removeTask($event)"
+        ></pert-task-row>
+    </div>
+
+    <div class="col-sm-4">
+        <h4>Completed</h4>
+        <pert-task-row *ngFor="let task of getCompletedTasks() let i=index"
+                       [task]="task"
+                       [title]="i+1"
+                       (onTaskRemoved)="removeTask($event)"
+        ></pert-task-row>
+    </div>
+
+
+</div>

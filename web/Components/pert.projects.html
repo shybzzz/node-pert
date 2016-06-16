@@ -1,0 +1,32 @@
+<h2><span class="glyphicon glyphicon-list"></span> Projects</h2>
+
+
+<div class="buttons-pane">
+    <div class="btn-group">
+        <button class="btn add" (click)="addProject()"><span class="glyphicon glyphicon-plus"></span> New
+            Project
+        </button>
+        <button class="btn back" (click)="navigateToDashboard()"><span
+                class="glyphicon glyphicon-backward"></span> Back to Dashboard
+        </button>
+
+    </div>
+</div>
+
+<div class="projects-holder">
+    <div class="col-sm-3" *ngFor="let project of projects">
+        <h3><span class="glyphicon glyphicon-tower"></span> {{project.name||'Project'}}</h3>
+
+        <div class="btn-group">
+            <button class="kanban icon btn" (click)="goToProjectTasks(project)"></button>
+            <button class="btn update" (click)="editProject(project)"><span
+                    class="glyphicon glyphicon-edit"></span></button>
+            <button class="btn remove" (click)="removeProject(project)"><span
+                    class="glyphicon glyphicon-remove"></span></button>
+        </div>
+        <div class="project-description">
+            {{project.description}}
+        </div>
+    </div>
+
+</div>

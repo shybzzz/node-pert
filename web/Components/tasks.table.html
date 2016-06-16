@@ -1,0 +1,49 @@
+<h3> {{project?.name}} Tasks</h3>
+{{tasks?.length}} Tasks
+<div class="container">
+    <div class="col-sm-6">
+        <tasks-status-pie [projectId]="projectId"></tasks-status-pie>
+    </div>
+    <div class="col-sm-6">
+        <tasks-graph  [projectId]="projectId"  [options]="taskGraphOptions"></tasks-graph>
+    </div>
+</div>
+<div class="container">
+    <button class="btn add" (click)="addNew()"><span class="glyphicon glyphicon-plus"></span>
+    </button>
+</div>
+<table class="tasks-table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Estimation</th>
+        <th>Predecessors</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let task of tasks let i=index">
+        <th class="status" [ngStyle]="getStatusStyle(task)">
+            {{i+1}}
+        </th>
+        <td>
+            <label>
+                <textarea [(ngModel)]="task.name" (change)="saveTask(task)"></textarea>
+            </label>
+        </td>
+        <td>
+            <label>
+                <input type="number" [(ngModel)]="task.estimation" (change)="saveTask(task)">
+            </label>
+        </td>
+        <td>
+            <predecessors-list
+                    [task]="task"
+                    (onChange)="refreshTasks()"
+            ></predecessors-list>
+        </td>
+        <td>
+            <button class="btn remove" (click)="deleteTask(task)"><span
+                    class="glyphicon glyphicon-remove"></span>
+            </button>
+        </td>
+    </tr>
+</table>

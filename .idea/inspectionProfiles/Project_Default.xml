@@ -1,0 +1,67 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="15">
+            <item index="0" class="java.lang.String" itemvalue="(click)" />
+            <item index="1" class="java.lang.String" itemvalue="(addtask)" />
+            <item index="2" class="java.lang.String" itemvalue="[(ngmodel)]" />
+            <item index="3" class="java.lang.String" itemvalue="pinputtext" />
+            <item index="4" class="java.lang.String" itemvalue="pbutton" />
+            <item index="5" class="java.lang.String" itemvalue="icon" />
+            <item index="6" class="java.lang.String" itemvalue="[routerlink]" />
+            <item index="7" class="java.lang.String" itemvalue="[ngclass.new]" />
+            <item index="8" class="java.lang.String" itemvalue="[ngclass]" />
+            <item index="9" class="java.lang.String" itemvalue="[hidden]" />
+            <item index="10" class="java.lang.String" itemvalue="[value]" />
+            <item index="11" class="java.lang.String" itemvalue="([ngmodel])" />
+            <item index="12" class="java.lang.String" itemvalue="(change)" />
+            <item index="13" class="java.lang.String" itemvalue="[ngstyle]" />
+            <item index="14" class="java.lang.String" itemvalue="#holder" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="29">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="task-row" />
+            <item index="7" class="java.lang.String" itemvalue="tasks-table" />
+            <item index="8" class="java.lang.String" itemvalue="p-menubar" />
+            <item index="9" class="java.lang.String" itemvalue="p-datagrid" />
+            <item index="10" class="java.lang.String" itemvalue="p-panel" />
+            <item index="11" class="java.lang.String" itemvalue="widget" />
+            <item index="12" class="java.lang.String" itemvalue="dashboard" />
+            <item index="13" class="java.lang.String" itemvalue="router-outlet" />
+            <item index="14" class="java.lang.String" itemvalue="ng-content" />
+            <item index="15" class="java.lang.String" itemvalue="w-title" />
+            <item index="16" class="java.lang.String" itemvalue="rooter-outlet" />
+            <item index="17" class="java.lang.String" itemvalue="pert-task-row" />
+            <item index="18" class="java.lang.String" itemvalue="bar-chart" />
+            <item index="19" class="java.lang.String" itemvalue="p-autocomplete" />
+            <item index="20" class="java.lang.String" itemvalue="sticky-task" />
+            <item index="21" class="java.lang.String" itemvalue="sticky-set" />
+            <item index="22" class="java.lang.String" itemvalue="p-chart" />
+            <item index="23" class="java.lang.String" itemvalue="task-status-pie" />
+            <item index="24" class="java.lang.String" itemvalue="tasks-status-pie" />
+            <item index="25" class="java.lang.String" itemvalue="predecessors-list" />
+            <item index="26" class="java.lang.String" itemvalue="vis-network" />
+            <item index="27" class="java.lang.String" itemvalue="task-graph" />
+            <item index="28" class="java.lang.String" itemvalue="tasks-graph" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

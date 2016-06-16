@@ -1,0 +1,23 @@
+import express = require("express");
+import {projectsRepository, tasksRepository} from "../Repositories";
+import {CrudAdapter} from "../Adapters/CrudAdapter";
+import {TasksAdapter} from "../Adapters/TasksAdapter";
+
+var router = express.Router();
+router.get('/', CrudAdapter.getAll(projectsRepository));
+router.post('/', CrudAdapter.create(projectsRepository));
+router.get('/:id', CrudAdapter.getById(projectsRepository, 'id'));
+router.put('/:id', CrudAdapter.updateById(projectsRepository, 'id'));
+router.delete('/:id', CrudAdapter.deleteById(projectsRepository, 'id'));
+router.get('/:id/tasks', TasksAdapter.getProjectTasks);
+router.get('/:id/currentTasks', TasksAdapter.getCurrentTasks);
+router.get('/:id/blockedTasks', TasksAdapter.getBlockedTasks);
+router.get('/:id/todoTasks', TasksAdapter.getTodoTasks);
+router.get('/:id/doingTasks', TasksAdapter.getDoingTasks);
+router.get('/:id/doneTasks', TasksAdapter.getDoneTasks);
+router.get('/:id/projectTasksStatusSummary', TasksAdapter.getProjectTasksStatusSummary);
+router.post('/:id/tasks/', CrudAdapter.create(tasksRepository));
+router.get('/:id/graphData', TasksAdapter.getGraphData);
+router.put('/:id/tasks/:taskId', CrudAdapter.updateById(tasksRepository, 'taskId'));
+router.delete('/:id/tasks/:taskId', CrudAdapter.updateById(tasksRepository, 'taskId'));
+export var projectsRouter = router;

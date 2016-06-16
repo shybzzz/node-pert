@@ -1,0 +1,18 @@
+<div class="{{status}} sticky-task"
+
+>
+    <div class="dashboard">
+
+    </div>
+    <div class="sticky">
+        <div class="name" title="{{task?.name}}">
+            {{task?.name | shortenString:50}}
+        </div>
+        <div class="duration">
+            Duration: {{getDuration() | taskDuration}}
+        </div>
+        <div class="estimation">
+            Estimation: {{task?.estimation}}
+        </div>
+    </div>
+</div>

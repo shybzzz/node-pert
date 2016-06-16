@@ -1,0 +1,26 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  font-size: small;
+  border-radius: 0;
+  height: 24px;
+
+  &:hover {
+    background-color: aliceblue;
+  }
+
+  &.remove {
+    color: red;
+  }
+  &.update, &.add {
+    color: green;
+  }
+
+  &.list {
+    color: #0b58a2;
+  }
+
+  &.back {
+    color: #00b3ee;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="predecessors-holder">
+    <div *ngFor="let predecessor of predecessors" class="predecessor">
+        <div class="name" title="{{predecessor.name}}">
+            {{predecessor.name}}
+        </div>
+        <div class="buttons-holder">
+            <button class="btn remove" (click)="removePredecessor(predecessor)"><span
+                    class="glyphicon glyphicon-remove"></span>
+            </button>
+        </div>
+    </div>
+    <div>
+        <p-autoComplete
+                field="name"
+                [(ngModel)]="selectedPredecessor"
+                placeholder="Add Predecessor"
+                [suggestions]="filteredSuggestions"
+                (completeMethod)="querySuggestions($event)"
+                (onSelect)="onPredecessorSelect($event)"
+        ></p-autoComplete>
+    </div>
+</div>

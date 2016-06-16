@@ -1,0 +1,33 @@
+$tasks-table-border: 2px black solid;
+
+.tasks-table {
+  font-size: small;
+  width: 90%;
+
+  tr:hover {
+    background-color: aliceblue;
+  }
+
+  td, th {
+    padding: 8px;
+    max-width: 50%;
+  }
+  th {
+    text-transform: uppercase;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  textarea, input {
+    width: 100%;
+    height: 100%;
+  }
+
+  .status {
+
+    border-left: 8px solid;
+
+  }
+}
