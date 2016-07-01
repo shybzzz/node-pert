@@ -36,6 +36,7 @@ export class TasksTable implements OnInit, AfterViewInit {
     ngAfterViewInit():any {
         this.refreshTasks();
     }
+
     ngOnInit():any {
         this.projectId = this.routeParams.get('id');
         this.refreshProject();
