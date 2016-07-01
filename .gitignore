@@ -48,3 +48,4 @@ Temporary Items
 
 deploy/
 node_modules/
+.idea/
