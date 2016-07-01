@@ -6,6 +6,7 @@ import bodyParser = require('body-parser');
 import {tasksRouter} from './Routes/tasks';
 import {projectsRouter} from './Routes/projects';
 
+//noinspection TypeScriptUnresolvedVariable,TypeScriptUnresolvedFunction
 let parent = path.dirname(__dirname);
 
 export interface AppConfig {
@@ -20,6 +21,7 @@ export class App {
     constructor(private config:AppConfig) {
         mongoose.connect(config.dbDest, config.mongoOptions);
         let app = this.app = express();
+        //noinspection TypeScriptUnresolvedFunction
         app.use(express.static(parent + "/public"));
 
         this
@@ -40,6 +42,7 @@ export class App {
 
     private useBodyParser():App {
         let app = this.app;
+        //noinspection TypeScriptUnresolvedFunction
         app.use(bodyParser.urlencoded({
             extended: true
         }));

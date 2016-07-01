@@ -4,7 +4,8 @@ const COPY_ASSETS = 'copy:assets';
 gulp.task(COPY_ASSETS, [
     require("./copy.public.libs.js"),
     require("./copy.css.assets"),
-    require("./copy.images")
+    require("./copy.images"),
+    require("./copy.app.configs")
 
 ], function () {
     return gulp.src([
