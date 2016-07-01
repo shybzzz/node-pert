@@ -26,7 +26,7 @@ export class PredecessorsList implements OnInit {
 
     saveTask(task?:any) {
         let task = task || this.task;
-        this.tasksService
+        return this.tasksService
             .saveTask(task)
             .then(()=>this.onChange.emit(task));
     }

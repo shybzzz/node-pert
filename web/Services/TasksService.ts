@@ -6,6 +6,7 @@ import {Observable} from "rxjs";
 import 'rxjs/add/operator/toPromise';
 import {BaseService} from "./BaseService";
 import {TasksOperator} from "../../shared/tasks.operator";
+import Promise = webdriver.promise.Promise;
 
 var projectsUrl = ROUTES.api.projects;
 var tasksUrl = ROUTES.api.tasks;
@@ -99,5 +100,10 @@ export class TasksService extends BaseService {
             .toPromise()
             .then(r=>r.json())
             .catch(this.handleError);
+    }
+
+    safeGetProjectTasks(projectId:string):Promise {
+        //noinspection TypeScriptUnresolvedFunction
+        return this.getProjectTasks(projectId).toPromise();
     }
 }

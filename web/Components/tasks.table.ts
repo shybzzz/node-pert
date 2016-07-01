@@ -7,10 +7,10 @@ import {ProjectOperator} from "../../shared/project.operator";
 
 import {ROUTES} from "../routes";
 import {RouteParams, Router} from "@angular/router-deprecated";
-import {TaskStatusPie} from "./tasks.status.pie";
+import {TaskStatusPie} from "./ProjectCharts/tasks.status.pie";
 import {TasksStatusColors} from '../AppConstants'
 import {PredecessorsList} from "./predecessors.list";
-import {TasksGraph} from "./TasksGraph";
+import {TasksGraph} from "./ProjectCharts/TasksGraph";
 
 var projectsUrl = ROUTES.api.projects;
 @Component({
@@ -46,7 +46,7 @@ export class TasksTable implements OnInit, AfterViewInit {
             this.tasks = tasks;
             this.refreshPie();
             this.taskGraph.refresh();
-            this.predecessorsLists.toArray().forEach((p)=>p.refresh());
+            //this.predecessorsLists.toArray().forEach((p)=>p.refresh());
         });
     };
 

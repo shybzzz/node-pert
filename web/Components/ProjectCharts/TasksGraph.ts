@@ -1,6 +1,6 @@
 import {Component, Input, ViewChild, AfterViewInit} from "@angular/core"
-import {VisNetwork} from "./VisNetwork";
-import {TasksService} from "../Services/TasksService";
+import {VisNetwork} from "./../VisNetwork";
+import {TasksService} from "../../Services/TasksService";
 
 @Component({
     selector: "tasks-graph",

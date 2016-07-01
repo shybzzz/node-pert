@@ -1,7 +1,7 @@
 import {Component, OnInit, Input, DoCheck} from "@angular/core"
-import {UIChart} from 'primeng/primeng';
-import {TasksService} from "../Services/TasksService";
-import {TasksStatusColors} from "../AppConstants";
+import {UIChart} from "primeng/primeng"
+import {TasksService} from "../../Services/TasksService";
+import {TasksStatusColors} from "../../AppConstants";
 
 @Component({
     selector: "tasks-status-pie",

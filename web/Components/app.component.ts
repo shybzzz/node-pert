@@ -11,8 +11,9 @@ import {PertWidget} from "./pert.widget";
 import {PertDashBoard} from "./pert.dashboard";
 import {ProjectEditor} from "./project.editor";
 import {ProjectTasks} from "./project.tasks";
-import {ProjectCanban} from "./project.canban";
+import {ProjectKanban} from "./Kanban/project.kanban";
 import {TasksTable} from "./tasks.table";
+import {TasksList} from "./TasksList/TasksList";
 
 
 @RouteConfig([
@@ -20,8 +21,9 @@ import {TasksTable} from "./tasks.table";
     {path: '/projects', component: PertProjects, as: "Projects"},
     {path: '/projects/:id', component: ProjectEditor, as: "EditProject"},
     {path: '/projects/:id/tasks/', component: ProjectTasks, as: "ProjectTasks"},
-    {path: '/projects/:id/canban/', component: ProjectCanban, as: "ProjectCanban"},
-    {path: '/projects/:id/tasksTable/', component: TasksTable, as: "TasksTable"}
+    {path: '/projects/:id/kanban/', component: ProjectKanban, as: "ProjectKanban"},
+    {path: '/projects/:id/tasksTable/', component: TasksTable, as: "TasksTable"},
+    {path: '/projects/:id/tasksList/', component: TasksList, as: "TasksList"}
 
 ])
 

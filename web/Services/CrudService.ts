@@ -13,20 +13,24 @@ export class CrudService {
     }
 
     getAllEntities(url:string):Observable {
+        //noinspection TypeScriptUnresolvedFunction
         return this.http.get(url)
             .map(res => res.json());
     }
 
     getEntityById(url:string, id:any) {
+        //noinspection TypeScriptUnresolvedFunction
         return this.http.get(url + id)
             .map(res => res.json());
     }
 
     addEntity(url:string, entity:any):Observable {
+        //noinspection TypeScriptUnresolvedFunction
         return this.http.post(url, JSON.stringify(entity), postOptions).map(res => res.json())
     }
 
     updateEntity(url:string, entity:any) {
+        //noinspection TypeScriptUnresolvedFunction
         return this.http.put(url + entity._id, JSON.stringify(entity), postOptions).map(res => res.json())
     }
 
@@ -34,4 +38,8 @@ export class CrudService {
         return this.http.delete(url + entity._id)
     }
 
+    safeGateEntityById(url:string, id:string):Promise {
+        //noinspection TypeScriptUnresolvedFunction
+        return this.getEntityById(url, id).toPromise();
+    }
 }

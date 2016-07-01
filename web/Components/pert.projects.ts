@@ -49,6 +49,6 @@ export class PertProjects implements OnInit {
     }
 
     goToProjectTasks(project){
-        this._router.navigate(["ProjectCanban", {id: project._id}])
+        this._router.navigate(["ProjectKanban", {id: project._id}])
     }
 }

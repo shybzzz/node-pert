@@ -12,6 +12,7 @@
     <div>
         <p-autoComplete
                 field="name"
+                minLength="1"
                 [(ngModel)]="selectedPredecessor"
                 placeholder="Add Predecessor"
                 [suggestions]="filteredSuggestions"

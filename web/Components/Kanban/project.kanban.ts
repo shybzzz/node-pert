@@ -1,15 +1,15 @@
 import {Component, OnInit} from "@angular/core"
 import {RouteParams, Router} from "@angular/router-deprecated";
-import {TasksService} from "../Services/TasksService";
+import {TasksService} from "../../Services/TasksService";
 import {StickySet} from "./sticky.set";
 
 @Component({
-    selector: "project-canban",
-    templateUrl: "project.canban.html",
+    selector: "project-kanban",
+    templateUrl: "project.kanban.html",
     directives: [StickySet]
 })
 
-export class ProjectCanban implements OnInit {
+export class ProjectKanban implements OnInit {
 
     projectId:string;
     currentTasks:any[];

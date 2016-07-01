@@ -1,7 +1,7 @@
 import {Component, Input} from "@angular/core"
-import {TasksOperator} from "../../shared/tasks.operator";
-import {TaskDuration} from "../Pipes/task.duration";
-import {ShortenString} from "../Pipes/shorten.string";
+import {TasksOperator} from "../../../shared/tasks.operator";
+import {TaskDuration} from "../../Pipes/task.duration";
+import {ShortenString} from "../../Pipes/shorten.string";
 
 @Component({
     selector: "sticky-task",
