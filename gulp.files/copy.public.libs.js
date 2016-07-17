@@ -51,9 +51,9 @@ gulp.task(COPY_ANGULAR2_IN_MEMORY_API, function () {
 
 gulp.task(COPY_ES6_SHIM, function () {
     return gulp.src([
-            'node_modules/es6-shim/**/*'
+            'node_modules/core-js/client/**/*'
         ])
-        .pipe(gulp.dest('deploy/public/js/lib/es6-shim'))
+        .pipe(gulp.dest('deploy/public/js/lib/core-js/client'))
 });
 
 gulp.task(COPY_REFLECT_METADATA, function () {

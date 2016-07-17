@@ -31,9 +31,6 @@
     },
     "mongoose/mongoose.d.ts": {
       "commit": "2712dd1e88d5a3f940592bc5d7102c2ab4eb39a7"
-    },
-    "d3/d3.d.ts": {
-      "commit": "6052959591c9bc6f8463c58220965c7030ba934d"
     }
   }
 }

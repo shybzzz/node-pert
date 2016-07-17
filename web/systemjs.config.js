@@ -6,7 +6,6 @@
         'app':                        'app', // 'dist',
         'shared':                        'shared', // 'dist',
         'primeng':                    'js/lib/primeng',
-        //'d3':                         'js/lib/d3/src',
         'rxjs':                       'js/lib/rxjs',
         'angular2-in-memory-web-api': 'js/lib/angular2-in-memory-web-api',
         '@angular':                   'js/lib/@angular'
@@ -19,7 +18,6 @@
         'rxjs':                       { defaultExtension: 'js' },
         'angular2-in-memory-web-api': { defaultExtension: 'js' },
         'primeng':                    { defaultExtension: 'js' }
-        //'d3':                    { defaultExtension: 'js' }
     };
 
     var packageNames = [
