@@ -6,7 +6,6 @@ import {Observable} from "rxjs";
 import 'rxjs/add/operator/toPromise';
 import {BaseService} from "./BaseService";
 import {TasksOperator} from "../../shared/tasks.operator";
-import Promise = webdriver.promise.Promise;
 
 var projectsUrl = ROUTES.api.projects;
 var tasksUrl = ROUTES.api.tasks;

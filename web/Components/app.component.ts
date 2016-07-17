@@ -16,23 +16,23 @@ import {TasksTable} from "./tasks.table";
 import {TasksList} from "./TasksList/TasksList";
 
 
-@RouteConfig([
-    {path: '/dashboard', component: PertDashBoard, as: "Dashboard", useAsDefault: true},
-    {path: '/projects', component: PertProjects, as: "Projects"},
-    {path: '/projects/:id', component: ProjectEditor, as: "EditProject"},
-    {path: '/projects/:id/tasks/', component: ProjectTasks, as: "ProjectTasks"},
-    {path: '/projects/:id/kanban/', component: ProjectKanban, as: "ProjectKanban"},
-    {path: '/projects/:id/tasksTable/', component: TasksTable, as: "TasksTable"},
-    {path: '/projects/:id/tasksList/', component: TasksList, as: "TasksList"}
-
-])
-
 @Component({
     selector: 'pert',
     templateUrl: 'app.component.html',
     providers: [CrudService, TasksService, ProjectsService, HTTP_PROVIDERS, ROUTER_PROVIDERS],
     directives: [ROUTER_DIRECTIVES, PertWidget, PertProjects, PertDashBoard, ProjectEditor, ProjectTasks]
 })
+@RouteConfig([
+    {path: '/dashboard', component: PertDashBoard, name: "Dashboard", useAsDefault: true},
+    {path: '/projects', component: PertProjects, name: "Projects"},
+    {path: '/projects/:id', component: ProjectEditor, name: "EditProject"},
+    {path: '/projects/:id/tasks/', component: ProjectTasks, name: "ProjectTasks"},
+    {path: '/projects/:id/kanban/', component: ProjectKanban, name: "ProjectKanban"},
+    {path: '/projects/:id/tasksTable/', component: TasksTable, name: "TasksTable"},
+    {path: '/projects/:id/tasksList/', component: TasksList, name: "TasksList"}
+
+])
+
 export class AppComponent {
 
     constructor() {

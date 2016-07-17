@@ -13,6 +13,6 @@ export class PertDashBoard {
     }
 
     navigateToProjects() {
-        this._router.navigate(['Projects']);
+        this._router.navigate(['/Projects']);
     }
 }
