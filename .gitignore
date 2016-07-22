@@ -50,3 +50,4 @@ deploy/
 node_modules/
 .idea/
 typings/
+src/application.config.json
