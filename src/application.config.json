@@ -1,5 +1,5 @@
 {
-  "port": 85,
+  "port": 80,
   "dbDest": "mongodb://localhost/pert",
   "mongoOptions": {
     "server": {
